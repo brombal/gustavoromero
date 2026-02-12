@@ -32,14 +32,17 @@
             performer: 'Gustavo Romero (piano)',
             image: 'assets/images/albums/mompou.jpg',
             tracks: [
-                'Canciones y Danzas No. 1-12',
+                'Canciones y Danzas Nos. 1-12',
                 'Impresiones Intimas:',
-                '  - Pajaro Triste',
-                '  - La Barco',
+                '  - Pájaro Triste',
+                '  - La Barca',
                 '  - Cuna',
                 '  - Secreto',
                 '  - Gitano',
-                '  - And more...'
+                '  - El Lago',
+                '  - Diálogo',
+                '  - La Cegueta',
+                '  - Festejo'
             ],
             purchaseUrl: 'https://www.amazon.com/Mompou-Complete-Canciones-Impresiones-Intimas/dp/B000001SG4/ref=sr_1_1?s=music&ie=UTF8&qid=1530554215&sr=1-1&keywords=gustavo+romero'
         },
@@ -319,12 +322,6 @@
             modalClose.addEventListener('click', closeModal);
         }
 
-        // Close modal on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && albumModal.classList.contains('active')) {
-                closeModal();
-            }
-        });
     }
 
     /**
@@ -386,6 +383,10 @@
                 const videoId = thumb.dataset.video;
                 if (videoId) {
                     featuredVideo.src = `https://www.youtube.com/embed/${videoId}`;
+
+                    // Update active thumbnail
+                    videoThumbs.forEach(t => t.classList.remove('active'));
+                    thumb.classList.add('active');
 
                     // Scroll to featured video
                     const videoSection = document.querySelector('.video-featured');
