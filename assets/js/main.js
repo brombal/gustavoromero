@@ -207,7 +207,7 @@
      * Setup smooth scrolling for anchor links
      */
     function setupSmoothScroll() {
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        document.querySelectorAll('a[href^="#"]:not([target="_blank"])').forEach(anchor => {
             anchor.addEventListener('click', (e) => {
                 e.preventDefault();
                 const targetId = anchor.getAttribute('href').slice(1);
