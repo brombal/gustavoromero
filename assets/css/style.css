@@ -17,7 +17,7 @@
 
     /* Typography */
     --font-display: 'Cormorant Garamond', Georgia, serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Raleway', -apple-system, BlinkMacSystemFont, sans-serif;
 
     /* Spacing */
     --space-xs: 0.5rem;
@@ -54,8 +54,8 @@ body {
     color: var(--color-white);
     background-color: var(--color-black);
     overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    /*-webkit-font-smoothing: antialiased;*/
+    /*-moz-osx-font-smoothing: grayscale;*/
 }
 
 /* Typography */
@@ -125,7 +125,7 @@ img {
 .nav-logo a {
     font-family: var(--font-display);
     font-size: 1.5rem;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
@@ -277,6 +277,7 @@ img {
     text-align: center;
     font-family: var(--font-display);
     font-style: italic;
+    font-weight: 400;
     font-size: 1.25rem;
     color: var(--color-gray-light);
     margin-bottom: var(--space-lg);
@@ -329,7 +330,7 @@ img {
     font-family: var(--font-display);
     font-size: clamp(1.25rem, 3vw, 1.75rem);
     font-style: italic;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.3em;
     margin-bottom: var(--space-lg);
     color: var(--color-gray-light);
@@ -361,8 +362,9 @@ img {
     max-width: 700px;
     margin: 0 auto var(--space-lg);
     font-family: var(--font-display);
-    font-size: 1.1rem;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
     font-style: italic;
+    font-weight: 400;
     color: var(--color-off-white);
     line-height: 1.8;
     text-shadow: 0 2px 15px rgba(0, 0, 0, 0.8);
@@ -426,6 +428,7 @@ img {
 .bio-content p {
     margin-bottom: 1.25rem;
     color: var(--color-off-white);
+    font-size: 0.9rem;
 }
 
 .bio-content p:last-child {
@@ -433,8 +436,11 @@ img {
 }
 
 .bio-content p:first-child {
-    font-size: 1.05rem;
-    line-height: 1.75;
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--color-white);
 }
 
 .bio-content strong {
@@ -502,6 +508,7 @@ img {
 .quote-card blockquote p {
     font-family: var(--font-display);
     font-style: italic;
+    font-weight: 400;
     line-height: 1.5;
     margin-bottom: var(--space-sm);
     color: var(--color-off-white);
@@ -522,11 +529,11 @@ img {
 }
 
 .quote-medium blockquote p {
-    font-size: clamp(1.1rem, 2vw, 1.35rem);
+    font-size: clamp(1.15rem, 2vw, 1.35rem);
 }
 
 .quote-small blockquote p {
-    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    font-size: clamp(1.05rem, 1.5vw, 1.15rem);
 }
 
 /* Masonry responsive */
@@ -741,17 +748,6 @@ img {
     min-height: auto;
     padding-top: var(--space-xl);
     padding-bottom: var(--space-lg);
-}
-
-.contact-quote {
-    max-width: 600px;
-    margin: 0 auto var(--space-lg);
-    font-family: var(--font-display);
-    font-style: italic;
-    font-size: clamp(1.1rem, 2vw, 1.35rem);
-    color: var(--color-gray-light);
-    line-height: 1.6;
-    text-align: center;
 }
 
 .contact-container {
@@ -999,6 +995,9 @@ img {
 .modal-album-cover {
     aspect-ratio: 1;
     background: var(--color-gray-dark);
+    align-self: start;
+    overflow: hidden;
+    min-height: 0;
 }
 
 .modal-album-cover img {
@@ -1020,7 +1019,8 @@ img {
 .modal-album-subtitle {
     font-family: var(--font-display);
     font-style: italic;
-    font-size: 1.1rem;
+    font-weight: 400;
+    font-size: 1.15rem;
     color: var(--color-gray-light);
     margin-bottom: var(--space-md);
 }
@@ -1040,30 +1040,12 @@ img {
 
 .modal-album-tracks {
     margin-bottom: var(--space-md);
-    padding: var(--space-sm);
-    background: var(--color-gray-dark);
-    border-radius: 4px;
 }
 
-.modal-album-tracks h4 {
-    font-size: 1rem;
-    margin-bottom: var(--space-xs);
-    color: var(--color-accent);
-}
-
-.modal-album-tracks ul {
-    list-style: none;
-    font-size: 0.9rem;
+.modal-album-tracks p {
+    font-size: 0.95rem;
     color: var(--color-gray-light);
-}
-
-.modal-album-tracks li {
-    padding: var(--space-xs) 0;
-    border-bottom: 1px solid var(--color-dark);
-}
-
-.modal-album-tracks li:last-child {
-    border-bottom: none;
+    line-height: 1.6;
 }
 
 .modal-purchase-btn {

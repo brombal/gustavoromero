@@ -31,19 +31,7 @@
             composer: 'Frederic Mompou',
             performer: 'Gustavo Romero (piano)',
             image: 'assets/images/albums/mompou.jpg',
-            tracks: [
-                'Canciones y Danzas Nos. 1-12',
-                'Impresiones Intimas:',
-                '  - Pájaro Triste',
-                '  - La Barca',
-                '  - Cuna',
-                '  - Secreto',
-                '  - Gitano',
-                '  - El Lago',
-                '  - Diálogo',
-                '  - La Cegueta',
-                '  - Festejo'
-            ],
+            description: 'The complete twelve Canciones y Danzas and the nine pieces of Impresiones Intimas.',
             purchaseUrl: 'https://www.amazon.com/Mompou-Complete-Canciones-Impresiones-Intimas/dp/B000001SG4/ref=sr_1_1?s=music&ie=UTF8&qid=1530554215&sr=1-1&keywords=gustavo+romero'
         },
         chopin: {
@@ -52,16 +40,7 @@
             composer: 'Frederic Chopin',
             performer: 'Gustavo Romero (piano)',
             image: 'assets/images/albums/chopin.jpg',
-            tracks: [
-                'Impromptu No. 1 in A-flat major, Op. 29',
-                'Impromptu No. 2 in F-sharp major, Op. 36',
-                'Impromptu No. 3 in G-flat major, Op. 51',
-                'Impromptu No. 4 in C-sharp minor, Op. 66 "Fantaisie-Impromptu"',
-                'Barcarolle in F-sharp major, Op. 60',
-                'Scherzo No. 2 in B-flat minor, Op. 31',
-                'Two Polonaises',
-                'Two Etudes'
-            ],
+            description: 'Ten works including the four Impromptus, Fantaisie-Impromptu, Barcarolle, Scherzo No. 2, two Polonaises, and two Etudes.',
             purchaseUrl: 'https://www.amazon.com/Chopin-Complete-Impromptus-Other-Works/dp/B000001SI8/ref=sr_1_2?s=music&ie=UTF8&qid=1530554215&sr=1-2&keywords=gustavo+romero'
         },
         beethoven: {
@@ -70,13 +49,7 @@
             composer: 'Ludwig van Beethoven',
             performer: 'Gustavo Romero (piano), English Chamber Orchestra, conducted by James Sedares',
             image: 'assets/images/albums/beethoven.jpg',
-            tracks: [
-                'Piano Concerto No. 1 in C major, Op. 15',
-                'Piano Concerto No. 2 in B-flat major, Op. 19',
-                'Piano Concerto No. 3 in C minor, Op. 37',
-                'Piano Concerto No. 4 in G major, Op. 58',
-                'Piano Concerto No. 5 in E-flat major, Op. 73 "Emperor"'
-            ],
+            description: 'All five piano concertos, including the "Emperor," with the English Chamber Orchestra conducted by James Sedares.',
             purchaseUrl: 'https://www.amazon.com/Piano-Concertos-Ludwig-van-Beethoven/dp/B000001SIO/ref=sr_1_4?s=music&ie=UTF8&qid=1530554215&sr=1-4&keywords=gustavo+romero'
         },
         turina: {
@@ -85,13 +58,7 @@
             composer: 'Joaquin Turina & Joaquin Rodrigo',
             performer: 'Gustavo Romero (piano), San Diego Symphony Orchestra',
             image: 'assets/images/albums/turina-rodrigo.jpg',
-            tracks: [
-                'Rapsodia Sinfonica',
-                'La Oración Del Torero',
-                'Cuatro Madrigales Amatorios (4 pieces)',
-                'Tres Viejos Aires De Danza (3 pieces)',
-                'Zarabanda Lejana y Villanico (2 pieces)'
-            ],
+            description: 'Eleven Spanish orchestral and vocal works including Rapsodia Sinfonica, La Oración Del Torero, and Cuatro Madrigales Amatorios.',
             purchaseUrl: 'https://www.amazon.com/gp/product/B000001SFN'
         }
     };
@@ -346,13 +313,8 @@
         if (performerEl) performerEl.textContent = album.performer;
         if (purchaseLink) purchaseLink.href = album.purchaseUrl;
 
-        if (tracksEl && album.tracks) {
-            tracksEl.innerHTML = `
-                <h4>Track Listing</h4>
-                <ul>
-                    ${album.tracks.map(track => `<li>${track}</li>`).join('')}
-                </ul>
-            `;
+        if (tracksEl && album.description) {
+            tracksEl.innerHTML = `<p>${album.description}</p>`;
         }
 
         albumModal.classList.add('active');

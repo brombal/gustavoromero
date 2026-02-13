@@ -43,9 +43,3 @@
 
 ### The Honolulu Advertiser, Hawaii
 "Young American pianist Gustavo Romero took the audience for a wild ride with his performance of Rachmaninoff's Piano Concerto No. 3."
-
-### Julie Rozman (Personal Testimonial)
-<!-- Add full testimonial text here -->
-
-### Juanita Garcia, Mexican American Catholic College (Personal Testimonial)
-<!-- Add full testimonial text here -->
