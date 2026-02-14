@@ -223,6 +223,7 @@
                 e.preventDefault();
                 const targetId = anchor.getAttribute('href').slice(1);
                 scrollToSection(targetId);
+                history.replaceState(null, '', '#' + targetId);
             });
         });
 
