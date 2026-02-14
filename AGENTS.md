@@ -34,8 +34,8 @@ When the user says they've updated the markdown files:
 
 ## Design System (for any new elements)
 
-- **Colors:** Black (`#0a0a0a`), white, gold accent (`#c9a962`)
-- **Fonts:** Cormorant Garamond for headings, Inter for body
+- **Colors:** Deep black (`#080808`), warm ivory (`#ede5d8`/`#f7f2eb`), burnished gold accent (`#c5963a`)
+- **Fonts:** DM Serif Display for headings, Lexend for body
 - **Quote sizes:** Use `quote-large` for short quotes, `quote-medium` for medium, `quote-small` for longer quotes
 - **Animations:** Use `animate-on-scroll` class for fade-in effects
 
