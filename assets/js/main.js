@@ -6,6 +6,17 @@
 (function() {
     'use strict';
 
+    // Scroll to section if URL has a hash (e.g. from 404 redirect of /biography -> /#biography)
+    if (window.location.hash) {
+        var target = document.getElementById(window.location.hash.substring(1));
+        if (target) {
+            // Use requestAnimationFrame to ensure layout is ready
+            requestAnimationFrame(function() {
+                target.scrollIntoView();
+            });
+        }
+    }
+
     // DOM Elements
     const mainNav = document.getElementById('mainNav');
     const navToggle = document.getElementById('navToggle');
